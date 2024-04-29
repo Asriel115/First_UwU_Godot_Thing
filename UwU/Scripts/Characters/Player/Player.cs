@@ -4,16 +4,11 @@ using System;
 public partial class Player : CharacterBody3D
 {
     [ExportGroup("Required Nodes")] 
-    [Export] private AnimationPlayer animationPlayerNode;
-    [Export] private Sprite3D spriteNode;                            
+    [Export] public AnimationPlayer animationPlayerNode;
+    [Export] public Sprite3D spriteNode;                            
 
     private Vector2 direction = new();
-
-    public override void _Ready()
-    {
-        animationPlayerNode.Play(GameConstants.ANIM_IDLE);   
-    }
-
+    
     public override void _PhysicsProcess(double delta)
     {
         Velocity = new(direction.X, 0, direction.Y );
@@ -44,7 +39,7 @@ public partial class Player : CharacterBody3D
     {
         bool isNotMovingHorizontally = Velocity.X == 0;
 
-        if (isNotMovingHorizontally) {return; }
+        if (isNotMovingHorizontally) {return; }             
 
         bool isMovingLeft = Velocity.X < 0;
         spriteNode.FlipH = isMovingLeft;
