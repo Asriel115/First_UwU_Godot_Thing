@@ -1,13 +1,18 @@
-public class GameConstants
+public partial class GameConstants
 {
 
     //Animations
     public const string ANIM_IDLE = "Idle";
 
-    public const string ANIM_MOVE = "Move";
+    public const string ANIM_MOVE = "Move";            
+  
+}
 
 
-    //Inputs
+public partial class GameConstants
+{
+
+    //Inputs            
     public const string INPUT_MOVE_LEFT = "MoveLeft";
 
     public const string INPUT_MOVE_RIGHT = "MoveRight";

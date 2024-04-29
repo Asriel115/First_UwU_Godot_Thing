@@ -78,7 +78,9 @@ animationPlayerNode = NodePath("Sprite3D/AnimationPlayer")
 spriteNode = NodePath("Sprite3D")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0089674, 0, -0.000486374)
 flip_h = true
+texture_filter = 0
 texture = ExtResource("1_e2bhi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite3D"]
